@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { signOut } from 'firebase/auth'
-import { useAuth } from '../../hooks/firebase'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { signOut } from 'firebase/auth';
+import { useAuth } from '../../hooks/firebase';
 
 const Home: NextPage = () => {
   const auth = useAuth();
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     try {
       await signOut(auth);
     } catch (error) {
-      console.error("ログアウトエラー:", error);
+      console.error('ログアウトエラー:', error);
     }
   };
   return (
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

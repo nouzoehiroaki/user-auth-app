@@ -1,6 +1,6 @@
-import { initializeApp, getApps } from "firebase/app";
-import { getAuth, onAuthStateChanged, User } from "firebase/auth";
-import { useState } from "react";
+import { initializeApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import { useState } from 'react';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_APIKEY,
@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: process.env.NEXT_PUBLIC_PROJECTID,
   storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
-  appId:  process.env.NEXT_PUBLIC_APPID,
+  appId: process.env.NEXT_PUBLIC_APPID,
 };
 // let app;
 // if (!getApps().length) {

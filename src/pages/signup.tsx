@@ -1,8 +1,8 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { useAuth, useUser } from "../../hooks/firebase";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { useAuth, useUser } from '../../hooks/firebase';
 import {
   Box,
   Button,
@@ -12,8 +12,8 @@ import {
   Image,
   Input,
   Text,
-} from "@chakra-ui/react";
-import Link from "next/link";
+} from '@chakra-ui/react';
+import Link from 'next/link';
 
 type Inputs = {
   email: string;
@@ -49,12 +49,12 @@ export default function Signup() {
     if (password === confirmationPassword) {
       signup(email, password);
     } else {
-      alert("パスワードが一致しません");
+      alert('パスワードが一致しません');
     }
   };
 
   useEffect(() => {
-    if (currentUser) router.push("/");
+    if (currentUser) router.push('/');
   }, [currentUser, router]);
 
   return (
@@ -92,7 +92,7 @@ export default function Signup() {
                 size="lg"
                 mb="8"
                 placeholder="example@test.com"
-                {...register("email", { required: true })}
+                {...register('email', { required: true })}
               />
               <FormLabel fontWeight="bold">パスワード</FormLabel>
               {errors.password && (
@@ -102,7 +102,7 @@ export default function Signup() {
               )}
               <Input
                 type="password"
-                {...register("password", { required: true })}
+                {...register('password', { required: true })}
                 size="lg"
                 mb="8"
               />
@@ -114,7 +114,7 @@ export default function Signup() {
               )}
               <Input
                 type="password"
-                {...register("confirmationPassword", { required: true })}
+                {...register('confirmationPassword', { required: true })}
                 size="lg"
                 mb="8"
               />
@@ -133,7 +133,7 @@ export default function Signup() {
                   m="0 auto"
                   isLoading={isProcessingSignup}
                   _hover={{
-                    background: "gray.700",
+                    background: 'gray.700',
                   }}
                 >
                   サインアップ
